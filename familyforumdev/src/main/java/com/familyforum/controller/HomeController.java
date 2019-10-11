@@ -17,7 +17,7 @@ import com.familyforum.model.MyActivity;
 import com.familyforum.model.User;
 import com.familyforum.service.ActivityTypeServiceIntf;
 import com.familyforum.service.UserService;
-
+//Checking the commit
 @Controller
 public class HomeController {
 
