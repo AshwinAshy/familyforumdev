@@ -1,5 +1,7 @@
 package com.familyforum.controller;
-
+/**
+* Comment added by the teamlead.
+*/
 public class TestController {
 
 	public TestController() {
