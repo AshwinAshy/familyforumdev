@@ -50,7 +50,7 @@ public class MyActivityController {
 		List<ActivityType> listActivityType = activityTypeService.listAllActivityType();
 		modelAndView.addObject("username","dummyusername");
 		modelAndView.addObject("listActivityType", listActivityType);
-		modelAndView.setViewName("welcomepage");
+		modelAndView.setViewName("myactivities");
 		return modelAndView;
 	}
 

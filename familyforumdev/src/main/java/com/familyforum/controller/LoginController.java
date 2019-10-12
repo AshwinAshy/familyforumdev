@@ -49,7 +49,7 @@ public class LoginController {
 			List<ActivityType> listActivityType = activitiyTypeService.listAllActivityType();
 			modelAndView.addObject("username",username);
 			modelAndView.addObject("listActivityType", listActivityType);
-			modelAndView.setViewName("welcomepage");
+			modelAndView.setViewName("myactivities");
 		}else{
 			modelAndView.setViewName("successpage");
 			modelAndView.addObject("msg", "Invalid Username or password ......");

@@ -31,27 +31,119 @@
 				<li class="nav-item"><a class="nav-link" href="#">Gallery</a></li>
 				<li class="nav-item"><a class="nav-link" href="#">About</a></li>
 			</ul>
-			<form:form action="login" method="get"
-				class="form-inline my-2 my-lg-0">
-				<input class="form-control mr-sm-2" type="text"
-					placeholder="username" name="username">
-				<input class="form-control mr-sm-2" type="text"
-					placeholder="password" name="password">
-				<button class="btn btn-secondary my-2 my-sm-0" type="submit">Login</button>
-			</form:form>
-			&nbsp;
-			<button class="btn btn-secondary my-2 my-sm-0" type="submit">
-				<a href="#signup">Sign Up</a>
-			</button>
-		</div>
 	</nav>
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-6 jumbotron">
+				   	<div class="form-group">
+				   		<legend>Login</legend>
+				   		<form:form action="login" method="get"	class="form-inline my-2 my-lg-0">
+							<input class="form-control mr-sm-2" type="text"	placeholder="username" name="username">
+							<input class="form-control mr-sm-2" type="text"	placeholder="password" name="password">
+							<button class="btn btn-secondary my-2 my-sm-0" type="submit">Login</button>
+						</form:form>
+					</div>
+				</div>
+				<div class="col-lg-6">
+				   	<div class="form-group">
+						<legend>Sign Up Form</legend>
+					<form:form action="/signupformsubmit" modelAttribute="user" method="post">
+						<fieldset>
+							<legend>Sign Up</legend>
+							<div class="form-group">
+								<label for="firstname">Enter First Name</label> <input
+									type="text" name="firstname" class="form-control"
+									placeholder="First Name" value="ashwin" />
+							</div>
+							<div class="form-group">
+								<label for="middlename">Middle Name</label> <input type="text"
+									name="middlename" class="form-control"
+									placeholder="Middle Name" value="HS"/>
+							</div>
+							<div class="form-group">
+								<label for="lastname">Last Name</label> <input type="text"
+									name="lastname" class="form-control" placeholder="Last Name" value="kumar"/>
+							</div>
+							<div class="form-group">
+								<label for="exampleInputEmail1">Email address</label> <input
+									type="text" name="emailaddress" class="form-control"
+									id="exampleInputEmail1" aria-describedby="emailHelp"
+									placeholder="Enter email" value="ashwinaradhya@gmail.com" /> <small id="emailHelp"
+									class="form-text text-muted">We'll never share your
+									email with anyone else.</small>
+							</div>
+							<div class="form-group">
+								<label for="nickname">NickName</label> <input type="nickname"
+									name="nickname" class="form-control" id="nickname"
+									placeholder="Nick Name" value="ashy" />
+							</div>
+							<div class="form-group">
+								<label for="exampleTextarea">Hobbies</label>
+								<textarea name="hobbies" class="form-control" id="hobbies"
+									rows="3" >Guitar</textarea>
+							</div>
+							<div class="form-group">
+								<label for="nickname">Phone No</label> <input type="text"
+									name="phonenumber" class="form-control" id="phoneno"
+									placeholder="Phone No" value="9900901907" />
+							</div>
+							<div class="form-group">
+								<label for="username">UserName</label> <input type="text"
+									name="username" class="form-control" id="username"
+									placeholder="UserName" value="ashwin" />
+							</div>
+							<div class="form-group">
+								<label for="password">Password</label> <input type="password"
+									name="password" class="form-control"
+									id="exampleInputPassword1" placeholder="Password" value="ashwin"/>
+							</div>
+
+							<div class="form-group">
+								<label for="exampleInputFile">Profile Pic</label> <input
+									type="file" class="form-control-file" id="exampleInputFile"
+									aria-describedby="fileHelp"> <small id="fileHelp"
+									class="form-text text-muted">This is some placeholder
+									block-level help text for the above input. It's a bit lighter
+									and easily wraps to a new line.</small>
+							</div>
+							<fieldset class="form-group">
+								<legend>Gender</legend>
+								<div class="form-check">
+									<label class="form-check-label"> <input type="radio"
+										class="form-check-input" name="gender" id="radiofemale"
+										value="F" checked=""> Female
+									</label>
+								</div>
+								<div class="form-check">
+									<label class="form-check-label"> <input type="radio"
+										class="form-check-input" name="gender" id="radiomale"
+										value="M" checked="checked"> Male
+									</label>
+								</div>
+							</fieldset>
+							<button type="submit" class="btn btn-primary">Submit</button>
+						</fieldset>
+					</form:form>
+
+					</div>
+				</div>
+			</div>
+		</div>
 
 	<div class="container">
-		<div class="row">
+<!-- 		<div class="row">
+			<div class="col-sm-6">
+				<legend>Login</legend>
+			</div>
+		</div> -->
+<%-- 		<div class="row">
 			<span class="border">
-				<div class="col-sm-8">
+						<div class="col-sm-6">
+				<legend>Login</legend>
+			</div>
+		</div>
+				<div class="col-sm-6">
 					<form:form action="/signupformsubmit" modelAttribute="user" method="post">
-						<button type="submit" class="btn btn-primary">Submit</button>
 						<fieldset>
 							<legend>Sign Up</legend>
 							<div class="form-group">
@@ -131,7 +223,7 @@
 				</div>
 			</span>
 		</div>
-	</div>
+	</div> --%>
 
 
 	<!-- Optional JavaScript -->

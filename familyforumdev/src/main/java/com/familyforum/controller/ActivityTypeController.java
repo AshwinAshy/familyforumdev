@@ -33,7 +33,7 @@ public class ActivityTypeController {
 		List<ActivityType> listActivityType = activityTypeService.listAllActivityType();
 		modelAndView.addObject("listActivityType", listActivityType);
 		modelAndView.addObject("activitymsg", "Activity Type Added Successfully");
-		modelAndView.setViewName("welcomepage");
+		modelAndView.setViewName("myactivities");
 		
 		return modelAndView;		
 	}

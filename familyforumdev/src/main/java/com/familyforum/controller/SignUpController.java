@@ -22,7 +22,7 @@ public class SignUpController {
 	
 	@GetMapping("/signupform")
 	public ModelAndView showSignUpForm(ModelAndView modelAndView) {
-		modelAndView.setViewName("signupform");
+		modelAndView.setViewName("login");
 		return modelAndView;
 	}
 

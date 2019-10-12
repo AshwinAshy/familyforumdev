@@ -31,8 +31,7 @@
 				<li class="nav-item"><a class="nav-link" href="#">Gallery</a></li>
 				<li class="nav-item"><a class="nav-link" href="#">About</a></li>
 			</ul>
-			<form:form action="login" method="get"
-				class="form-inline my-2 my-lg-0">
+			<form:form action="login" method="get"	class="form-inline my-2 my-lg-0">
 				<input class="form-control mr-sm-2" type="text"
 					placeholder="username" name="username" value="ashwin1">
 				<input class="form-control mr-sm-2" type="text"
