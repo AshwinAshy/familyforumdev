@@ -1,6 +1,7 @@
 package com.familyforum.repository;
 
 import java.util.List;
+import java.util.Optional;
 
 import com.familyforum.model.User;
 
@@ -11,6 +12,8 @@ public interface UserRepositoryIntf {
 	List<User> getUserList();
 	
 	User getUserByID(Long id);
+	
+	Optional<User> getUserByName(String name);
 	
 	void deleteUserByID(Long id);
 	

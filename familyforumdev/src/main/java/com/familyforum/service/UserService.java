@@ -1,10 +1,10 @@
 package com.familyforum.service;
 
 import java.util.List;
+import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-import org.springframework.transaction.annotation.Transactional;
 
 import com.familyforum.model.User;
 import com.familyforum.repository.UserRepositoryIntf;
@@ -30,6 +30,11 @@ public class UserService implements UserServiceIntf {
 	@Override
 	public User getUserByID(Long id) {
 		return userRepository.getUserByID(id);
+	}
+	
+	@Override
+	public Optional<User> getUserByName(String name) {
+		return userRepository.getUserByName(name);
 	}
 	
 	@Override

@@ -27,34 +27,18 @@ public class LoginController {
 	@Autowired
 	ActivityTypeServiceIntf activitiyTypeService;
 	
+	@GetMapping("loginpage")
+	public String showloginpage(){
+		return "loginpage";
+	}
+	
 	@GetMapping("/login")
-	public ModelAndView temporaryLoginMethod(@RequestParam("username") String username,
-			@RequestParam("password") String password, ModelAndView modelAndView) {
-
-		Map<String, String> userMap = new HashMap<>();
-		List<User> userList = userService.getUserList();
-		for (User user : userList) {
-			userMap.put(user.getUsername(), user.getPassword());
-		}
-		System.out.println(userMap + "------username: " + username + " ........password : " + password);
-		boolean login = false;
-		
-		for(Map.Entry<String, String> entry : userMap.entrySet()){
-			if(	entry.getKey().equals(username) && entry.getValue().equals(password) ){
-				login = true;
-				break;
-			}
-		}
-		if(login){
+	public ModelAndView temporaryLoginMethod(ModelAndView modelAndView) {
 			List<ActivityType> listActivityType = activitiyTypeService.listAllActivityType();
-			modelAndView.addObject("username",username);
 			modelAndView.addObject("listActivityType", listActivityType);
 			modelAndView.setViewName("myactivities");
-		}else{
 			modelAndView.setViewName("successpage");
-			modelAndView.addObject("msg", "Invalid Username or password ......");
-		}
-		
+			modelAndView.addObject("msg", "Invalid Username or password ......");		
 		
 		return modelAndView;
 	}

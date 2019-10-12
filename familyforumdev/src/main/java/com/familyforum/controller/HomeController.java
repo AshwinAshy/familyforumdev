@@ -19,6 +19,7 @@ public class HomeController {
 
 	@GetMapping("/")
 	public ModelAndView handleHomePage(ModelAndView modelAndView) {
+		System.out.println("..........................handleHomePage");
 		modelAndView.setViewName("homepage");
 		return modelAndView;
 	}

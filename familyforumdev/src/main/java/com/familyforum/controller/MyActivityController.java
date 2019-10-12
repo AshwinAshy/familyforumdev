@@ -35,6 +35,15 @@ public class MyActivityController {
 		// TODO Auto-generated constructor stub
 	}
 	
+	@GetMapping("myactivities")
+	public ModelAndView showMyActivitiesPage(ModelAndView modelAndView){
+		List<ActivityType> listActivityType = activityTypeService.listAllActivityType();
+		modelAndView.addObject("username","dummyusername");
+		modelAndView.addObject("listActivityType", listActivityType);
+		modelAndView.setViewName("myactivities");
+		return modelAndView;
+	}
+	
 	@GetMapping("addMyActivity")
 	public ModelAndView addMyActivity(MyActivity myActivity, ModelAndView modelAndView, HttpServletRequest request){
 		Long activityID = 0L;

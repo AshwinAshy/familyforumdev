@@ -12,7 +12,7 @@
 	<meta charset="utf-8">
 	<meta name="viewport"
 		content="width=device-width, initial-scale=1, shrink-to-fit=no">
-	<title>Hello world, This is bootstrap!</title>
+	<title>login.jsp</title>
 </head>
 	<body>
 	<nav class="navbar navbar-expand-lg navbar-dark bg-primary">
@@ -38,8 +38,8 @@
 				   	<div class="form-group">
 				   		<legend>Login</legend>
 				   		<form:form action="login" method="get"	class="form-inline my-2 my-lg-0">
-							<input class="form-control mr-sm-2" type="text"	placeholder="username" name="username">
-							<input class="form-control mr-sm-2" type="text"	placeholder="password" name="password">
+							<input class="form-control mr-sm-2" type="text"	id="username" placeholder="username" name="username">
+							<input class="form-control mr-sm-2" type="text" id="password" placeholder="password" name="password">
 							<button class="btn btn-secondary my-2 my-sm-0" type="submit">Login</button>
 						</form:form>
 					</div>

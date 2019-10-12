@@ -12,7 +12,7 @@
 	<meta charset="utf-8">
 	<meta name="viewport"
 		content="width=device-width, initial-scale=1, shrink-to-fit=no">
-	<title>Hello world, This is bootstrap!</title>
+	<title>homepage.jsp</title>
 </head>
 	<body>
 	<nav class="navbar navbar-expand-lg navbar-dark bg-primary">
@@ -24,23 +24,15 @@
 		</button>
 		<div class="collapse navbar-collapse" id="navbarColor01">
 			<ul class="navbar-nav mr-auto">
-				<li class="nav-item active"><a class="nav-link" href="#">Home
-						<span class="sr-only">(current)</span>
-				</a></li>
-				<li class="nav-item"><a class="nav-link" href="#">Features</a></li>
+				<li class="nav-item active">
+					<a class="nav-link" href="#">Home<span class="sr-only">(current)</span></a>
+				</li>
+				<li class="nav-item"><a class="nav-link" href="/myactivities">Activity</a></li>
 				<li class="nav-item"><a class="nav-link" href="#">Gallery</a></li>
 				<li class="nav-item"><a class="nav-link" href="#">About</a></li>
 			</ul>
-			<form:form action="login" method="get"	class="form-inline my-2 my-lg-0">
-				<input class="form-control mr-sm-2" type="text"
-					placeholder="username" name="username" value="ashwin1">
-				<input class="form-control mr-sm-2" type="text"
-					placeholder="password" name="password" value="ashwin1">
-				<button class="btn btn-secondary my-2 my-sm-0" type="submit">Login</button>
-			</form:form>
-			&nbsp;
-			<form:form action="/signupform" method="get">
-				<button class="btn btn-secondary my-2 my-sm-0" type="submit">SignUp</button>
+			<form:form action="/logout" method="get">
+				<button class="btn btn-secondary my-2 my-sm-0" type="submit">Logout</button>
 			</form:form>
 		</div>
 	</nav>

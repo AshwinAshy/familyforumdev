@@ -12,7 +12,7 @@
 	<meta charset="utf-8">
 	<meta name="viewport"
 		content="width=device-width, initial-scale=1, shrink-to-fit=no">
-	<title>Welcome Page</title>
+	<title>myactivities.jsp</title>
 </head>
 	<body>
 		<nav class="navbar navbar-expand-lg navbar-dark bg-primary">
@@ -32,7 +32,7 @@
 					<li class="nav-item"><a class="nav-link" href="#">About</a></li>
 				</ul>
 				<button class="btn btn-secondary my-2 my-sm-0" type="submit">
-					<a href="#signup">Logout</a>
+					<a href="/logout">Logout</a>
 				</button>
 			</div>
 		</nav>
