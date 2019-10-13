@@ -37,9 +37,9 @@
 				<div class="col-lg-6 jumbotron">
 				   	<div class="form-group">
 				   		<legend>Login</legend>
-				   		<form:form action="login" method="get"	class="form-inline my-2 my-lg-0">
-							<input class="form-control mr-sm-2" type="text"	id="username" placeholder="username" name="username">
-							<input class="form-control mr-sm-2" type="text" id="password" placeholder="password" name="password">
+				   		<form:form action="login" method="get" commandName="user"	class="form-inline my-2 my-lg-0">
+							<form:input class="form-control mr-sm-2" type="text" path="username" placeholder="username" name="username"/>
+							<form:input class="form-control mr-sm-2" type="text" path="password" placeholder="password" name="password"/>
 							<button class="btn btn-secondary my-2 my-sm-0" type="submit">Login</button>
 						</form:form>
 					</div>

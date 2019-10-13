@@ -15,27 +15,50 @@
 	<title>homepage.jsp</title>
 </head>
 	<body>
-	<nav class="navbar navbar-expand-lg navbar-dark bg-primary">
-		<a class="navbar-brand" href="#">Navbar</a>
-		<button class="navbar-toggler" type="button" data-toggle="collapse"
-			data-target="#navbarColor01" aria-controls="navbarColor01"
-			aria-expanded="false" aria-label="Toggle navigation">
-			<span class="navbar-toggler-icon"></span>
-		</button>
-		<div class="collapse navbar-collapse" id="navbarColor01">
-			<ul class="navbar-nav mr-auto">
-				<li class="nav-item active">
-					<a class="nav-link" href="#">Home<span class="sr-only">(current)</span></a>
-				</li>
-				<li class="nav-item"><a class="nav-link" href="/myactivities">Activity</a></li>
-				<li class="nav-item"><a class="nav-link" href="#">Gallery</a></li>
-				<li class="nav-item"><a class="nav-link" href="#">About</a></li>
+		<nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+			<div class="collapse navbar-collapse" id="navbarColor01">
+				<ul class="navbar-nav mr-auto">
+					<li class="nav-item active">
+						<a class="nav-link" href="#">Home<span class="sr-only">(current)</span></a>
+					</li>
+					<li class="nav-item"><a class="nav-link" href="/myactivities">Activity</a></li>
+					<li class="nav-item"><a class="nav-link" href="#">Gallery</a></li>
+					<li class="nav-item"><a class="nav-link" href="#">About</a></li>
+				</ul>
+				<form:form action="/logout" method="get">
+					<button class="btn btn-secondary my-2 my-sm-0" type="submit">Logout</button>
+				</form:form>
+			</div>
+		</nav>
+
+		<!-- Div for Carousel slides -->
+		<div id="demo" class="carousel slide" data-ride="carousel">
+			<!-- Indicators -->
+			<ul class="carousel-indicators">
+				<li data-target="#demo" data-slide-to="0" class="active"></li>
+				<li data-target="#demo" data-slide-to="1"></li>
+				<li data-target="#demo" data-slide-to="2"></li>
 			</ul>
-			<form:form action="/logout" method="get">
-				<button class="btn btn-secondary my-2 my-sm-0" type="submit">Logout</button>
-			</form:form>
+	
+			<!-- The slideshow -->
+			<div class="carousel-inner">
+				<div class="carousel-item active">
+					<img src="/images/5.jpg" alt="Los Angeles">
+				</div>
+				<div class="carousel-item">
+					<img src="images/6.jpg" alt="Chicago">
+				</div>
+				<div class="carousel-item">
+					<img src="images/7.jpg" alt="New York">
+				</div>
+			</div>
+			<!-- Left and right controls -->
+			<a class="carousel-control-prev" href="#demo" data-slide="prev"> <span
+				class="carousel-control-prev-icon"></span>
+			</a> <a class="carousel-control-next" href="#demo" data-slide="next">
+				<span class="carousel-control-next-icon"></span>
+			</a>
 		</div>
-	</nav>
 
 
 

@@ -16,30 +16,25 @@
 </head>
 	<body>
 		<nav class="navbar navbar-expand-lg navbar-dark bg-primary">
-			<a class="navbar-brand" href="#">Navbar</a>
-			<button class="navbar-toggler" type="button" data-toggle="collapse"
-				data-target="#navbarColor01" aria-controls="navbarColor01"
-				aria-expanded="false" aria-label="Toggle navigation">
-				<span class="navbar-toggler-icon"></span>
-			</button>
 			<div class="collapse navbar-collapse" id="navbarColor01">
 				<ul class="navbar-nav mr-auto">
-					<li class="nav-item active"><a class="nav-link" href="#">Home
-							<span class="sr-only">(current)</span>
-					</a></li>
-					<li class="nav-item"><a class="nav-link" href="#">Features</a></li>
+					<li class="nav-item active">
+						<a class="nav-link" href="#">Home<span class="sr-only">(current)</span></a>
+					</li>
+					<li class="nav-item"><a class="nav-link" href="/myactivities">Activity</a></li>
 					<li class="nav-item"><a class="nav-link" href="#">Gallery</a></li>
 					<li class="nav-item"><a class="nav-link" href="#">About</a></li>
 				</ul>
-				<button class="btn btn-secondary my-2 my-sm-0" type="submit">
-					<a href="/logout">Logout</a>
-				</button>
+				<form:form action="/logout" method="get">
+					<button class="btn btn-secondary my-2 my-sm-0" type="submit">Logout</button>
+				</form:form>
 			</div>
-		</nav>
+	    </nav>
 		<div class="container">
 			<div class="row">
-				<div class="col-lg-6 jumbotron">
-				   	<div class="form-group">
+			<div class="col-md-6  panel-group" style="background-color:#B2BABB;">
+				<div class="panel panel-default">
+					<div class="form-group">
 						<form action="addMyActivity" method="get">
 							<fieldset>
 								<legend>Add My Activities</legend>
@@ -48,7 +43,6 @@
 						       			<form:options items="${listActivityType}" itemValue="actid" name="actid" itemLabel="activitytype"/>
 						   			</c:forEach>
 					    		</form:select>
-					    		<%-- <form:select path="listActivityType" items="${listActivityType}" itemValue="activitytype" /> --%>
 					    		<label class="control-label" for="date">Date</label>
         							<input class="form-control" id="date" name="date" placeholder="MM/DD/YYY" type="text"/>
         						<label class="control-label" for="Duration">Duration</label>
@@ -65,23 +59,30 @@
 						</form>
 					</div>
 				</div>
-				<div class="col-lg-6">
-				   	<div class="form-group">
-						<form action="addNewActivityType" method="post">
-							<fieldset>
-								<legend>Add New Activity Type</legend>
-								<div>${activitymsg}</div>
-								<div class="form-group">
-      								<label for="activityType">Activity Type</label>
-						    		<input type="text" name="activityType" class="form-control" id="activityType" placeholder="Activity Type">
-						    	</div>
-						    	<button type="submit" class="btn btn-default">Submit</button>
-							</fieldset>
-						</form>
-					</div>
-				</div>
 			</div>
+			
+	<div class="card text-white bg-primary mb-3" style="max-width: 20rem;">
+		<div class="card-header">Header</div>
+		<div class="card-body">
+			<div class="form-group">
+				<form action="addNewActivityType" method="post">
+					<fieldset>
+						<legend>Add New Activity Type</legend>
+						<div>${activitymsg}</div>
+						<div class="form-group">
+							<label for="activityType">Activity Type</label> <input
+								type="text" name="activityType" class="form-control"
+								id="activityType" placeholder="Activity Type">
+						</div>
+						<button type="submit" class="btn btn-default">Submit</button>
+					</fieldset>
+				</form>
+			</div>
+
 		</div>
+	</div>
+		</div>
+	</div>
 
 	<!-- Optional JavaScript -->
 		<!-- jQuery first, then Popper.js, then Bootstrap JS -->
