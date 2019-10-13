@@ -65,18 +65,18 @@
 		<div class="card-header">Header</div>
 		<div class="card-body">
 			<div class="form-group">
-				<form action="addNewActivityType" method="post">
+				<form:form action="addNewActivityType" modelAttribute="activityType" method="post">
 					<fieldset>
 						<legend>Add New Activity Type</legend>
 						<div>${activitymsg}</div>
 						<div class="form-group">
-							<label for="activityType">Activity Type</label> <input
-								type="text" name="activityType" class="form-control"
-								id="activityType" placeholder="Activity Type">
+							<label for="activityType">Activity Type</label>
+							<input type="text" name="activitytype" class="form-control" id="activityType" placeholder="Activity Type">
+							<form:errors path="activitytype" />
 						</div>
 						<button type="submit" class="btn btn-default">Submit</button>
 					</fieldset>
-				</form>
+				</form:form>
 			</div>
 
 		</div>

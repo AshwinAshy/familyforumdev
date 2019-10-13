@@ -6,6 +6,7 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 import javax.persistence.OneToMany;
+import javax.validation.constraints.NotEmpty;
 
 @Entity
 public class ActivityType {
@@ -13,6 +14,8 @@ public class ActivityType {
 	@Id
 	@GeneratedValue
 	private Long actid;
+	
+	@NotEmpty(message = "Field cannot be blank")
 	private String activitytype;
 
 	@OneToMany(mappedBy = "activityType")
