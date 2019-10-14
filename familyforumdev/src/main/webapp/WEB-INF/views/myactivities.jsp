@@ -22,14 +22,14 @@
 						<a class="nav-link" href="#">Home<span class="sr-only">(current)</span></a>
 					</li>
 					<li class="nav-item"><a class="nav-link" href="/myactivities">Activity</a></li>
-					<li class="nav-item"><a class="nav-link" href="#">Gallery</a></li>
+					<li class="nav-item"><a class="nav-link" href="/updateprofile">Update Profile</a></li>
 					<li class="nav-item"><a class="nav-link" href="#">About</a></li>
 				</ul>
 				<form:form action="/logout" method="get">
 					<button class="btn btn-secondary my-2 my-sm-0" type="submit">Logout</button>
 				</form:form>
 			</div>
-	    </nav>
+		</nav>
 		<div class="container">
 			<div class="row">
 			<div class="col-md-6  panel-group" style="background-color:#B2BABB;">

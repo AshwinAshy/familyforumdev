@@ -1,5 +1,7 @@
 package com.familyforum.controller;
 
+import java.security.Principal;
+
 import javax.servlet.http.HttpServletRequest;
 import javax.validation.Valid;
 
@@ -16,7 +18,7 @@ import com.familyforum.service.ActivityTypeServiceIntf;
 import com.familyforum.service.UserService;
 
 @Controller
-public class UpdateProfile {
+public class UpdateProfileController {
 
 	@Autowired
 	UserService userService;
@@ -24,22 +26,25 @@ public class UpdateProfile {
 	@Autowired
 	ActivityTypeServiceIntf activitiyTypeService;
 	
-	public UpdateProfile() {}
+	public UpdateProfileController() {}
 
 	@GetMapping("updateprofile")
-	public ModelAndView showUserProfilePage(ModelAndView modelAndView, HttpServletRequest request){
+	public ModelAndView showUserProfilePage(ModelAndView modelAndView){
 		modelAndView.setViewName("updateprofile");
 		return modelAndView;
 	}
 	
 	@PostMapping("/updateprofilesubmit")
-	public ModelAndView signUpSubmit(@Valid @ModelAttribute("user") User user,BindingResult result, ModelAndView modelAndView) {
+	public ModelAndView signUpSubmit(@Valid @ModelAttribute("user") User user,BindingResult result, ModelAndView modelAndView,HttpServletRequest request) {
+		
+		Principal principal = request.getUserPrincipal();
 		
 		if(result.hasErrors()){
 			modelAndView.setViewName("updateprofile");
 			return modelAndView;
 		}
 		
+		user.setUsername(principal.getName());
 		userService.saveUser(user);
 		System.out.println("Update profile submit is called ---------------");
 		System.out.println(user.toString());
