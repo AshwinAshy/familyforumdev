@@ -1,5 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1" pageEncoding="ISO-8859-1" isELIgnored="false" isErrorPage="true"%>
 <%@ taglib prefix="form" uri="http://www.springframework.org/tags/form"%>
+<%@ taglib prefix="spring" uri="http://www.springframework.org/tags" %>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
@@ -22,7 +23,7 @@
 						<a class="nav-link" href="#">Home<span class="sr-only">(current)</span></a>
 					</li>
 					<li class="nav-item"><a class="nav-link" href="/myactivities">Activity</a></li>
-					<li class="nav-item"><a class="nav-link" href="#">Gallery</a></li>
+					<li class="nav-item"><a class="nav-link" href="/updateprofile">Update Profile</a></li>
 					<li class="nav-item"><a class="nav-link" href="#">About</a></li>
 				</ul>
 				<form:form action="/logout" method="get">

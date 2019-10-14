@@ -11,6 +11,11 @@ import com.familyforum.model.User;
 import com.familyforum.service.ActivityTypeServiceIntf;
 import com.familyforum.service.UserService;
 
+/*
+ * This class is not being used for the time being.
+ * Similar functionality is being added to the 
+ * other controller called updateprofile controller.
+ */
 @Controller
 public class SignUpController {
 	

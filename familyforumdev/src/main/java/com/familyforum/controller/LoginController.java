@@ -14,7 +14,9 @@ import com.familyforum.model.ActivityType;
 import com.familyforum.model.User;
 import com.familyforum.service.ActivityTypeServiceIntf;
 import com.familyforum.service.UserService;
-
+/*
+ * This class is not being used as of now
+ */
 @Controller
 public class LoginController {
 

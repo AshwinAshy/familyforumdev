@@ -8,6 +8,7 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.OneToMany;
+import javax.validation.constraints.NotEmpty;
 
 import lombok.Data;
 
@@ -18,13 +19,17 @@ public class User {
 	@GeneratedValue
 	private Long id;
 
+	@NotEmpty(message="{field.empty}")
 	private String firstname;
 	private String middlename;
+	@NotEmpty(message="{field.empty}")
 	private String lastname;
+	@NotEmpty(message="{field.empty}")
 	private String emailaddress;
 	private String nickname;
 	private String gender;
 	private String hobbies;
+	@NotEmpty(message="{field.empty}")
 	private String phonenumber;
 	private String username;
 	private String password;
