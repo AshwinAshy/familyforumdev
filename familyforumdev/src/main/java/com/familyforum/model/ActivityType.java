@@ -15,7 +15,7 @@ public class ActivityType {
 	@GeneratedValue
 	private Long actid;
 	
-	@NotEmpty(message = "Field cannot be blank")
+	@NotEmpty(message ="{field.empty}")
 	private String activitytype;
 
 	@OneToMany(mappedBy = "activityType")
